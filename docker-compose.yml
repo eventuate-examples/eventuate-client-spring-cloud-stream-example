@@ -1,0 +1,12 @@
+eventuatebinderexample:
+  image: java:openjdk-8u91-jdk
+  working_dir: /app
+  volumes:
+    - ./build/libs:/app
+  command: java -jar /app/eventuate-client-spring-cloud-stream-example.jar
+  ports:
+    - "8080:8080"
+  environment:
+  environment:
+    EVENTUATE_API_KEY_ID:
+    EVENTUATE_API_KEY_SECRET:
